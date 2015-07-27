@@ -18,6 +18,11 @@ public class ColorAllocate {
 		System.out.print("Enter Total Vertices:");
 		vertexCount = input.nextInt();
 
+		if (vertexCount < 1) {
+			System.out.print("Invalid Number of Vertices");
+			return;
+		}
+		
 		AdjacentMatrix = new Boolean[vertexCount][vertexCount];
 
 		for (int i = 0; i < vertexCount; i++) {
@@ -68,7 +73,7 @@ public class ColorAllocate {
 				}
 			}
 		}
-		System.out.println("\n\n");
+		System.out.println("");
 
 		int colorSlot[] = new int[vertexCount];
 
